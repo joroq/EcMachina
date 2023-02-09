@@ -31,8 +31,9 @@ while (command.toUpperCase() != 'QUIT') {
             console.log(tasks[task]);
             let select = prompt('Remove ' + tasks[task] + '? ');
             if (select.toUpperCase() == 'Y') {
-                tasks.splice(task);
+                tasks.splice(task, 1);
                 console.log(tasks);
+                break;
             }
         }
     }
