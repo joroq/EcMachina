@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/joroq/EcMachina/issues"
   },
-  "homepage": "https://github.com/joroq/EcMachina#readme"
+  "homepage": "https://github.com/joroq/EcMachina#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
