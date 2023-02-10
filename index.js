@@ -10,6 +10,7 @@ let allowedCommands = {
     add: 'Adds an item to the list',
     show: 'Shows all tasks',
     remove: 'Choose an item to remove from the list',
+    save: 'Save list to a file',
     quit: 'Quit the program'
 };
 let tasks = [];
@@ -23,7 +24,7 @@ if (fs.existsSync('tasks.json')) {
 
 if (input) {
     tasks = JSON.parse(input);
-    console.log(tasks);
+    console.log('List loaded: ' + tasks);
 }
 
 while (command.toUpperCase() != 'QUIT') {
@@ -59,7 +60,6 @@ while (command.toUpperCase() != 'QUIT') {
         let json = JSON.stringify(tasks);
         fs.writeFileSync('tasks.json', json, (err) => {
             if (err) throw err;
-            //console.log("Task list has been saved");
         });
     }
 }
